@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-xs-5 col-md-5">
+            Please select the player !!
+            <br>
+            <br>
+            <app-players-list *ngFor = "let pl of players; let i=index" [playerss]= "pl" [index]="i"></app-players-list>
+    </div>
+    <div class="col-xs-7 col-md-7">
+            <router-outlet></router-outlet>
+    </div>
+</div>
