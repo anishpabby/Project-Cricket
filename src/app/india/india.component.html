@@ -3,7 +3,10 @@
             Please select the player !!
             <br>
             <br>
-            <app-players-list *ngFor = "let pl of players; let i=index" [playerss]= "pl" [index]="i"></app-players-list>
+            <app-players-list *ngFor = "let pl of players; let i=index" [playerss]= "pl" [index]="i">
+            </app-players-list>
+            <br>
+                <button type="submit" class="btn btn-primary" (click) ="onAddPlayers()">Add more players !!</button>
     </div>
     <div class="col-xs-7 col-md-7">
             <router-outlet></router-outlet>

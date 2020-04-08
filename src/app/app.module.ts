@@ -8,14 +8,16 @@ import { CountryListComponent } from './country-list/country-list.component';
 import { IndiaComponent } from './india/india.component';
 import { PlayersListComponent } from './shared/players-list/players-list.component';
 import { PlayerDetails } from './shared/players-list/player details/player-details.component';
+import { EditPlayersComponent } from './shared/edit-players/edit-players.component';
 
 const approutes : Routes = [
   { path : 'country', component : CountryListComponent},
-  { path : 'country/India', component : IndiaComponent, children : [
-    { path : ':id', component : PlayerDetails}
+  { path : 'country/:cname', component : IndiaComponent, children : [
+    { path : ':id', component : PlayerDetails},
+    { path : 'new', component : EditPlayersComponent}
   ]},
-  {path : 'home', component : HomeComponent},
-  {path : '', redirectTo : 'home' , pathMatch : 'full'}
+  { path : 'home', component : HomeComponent},
+  { path : '', redirectTo : 'home' , pathMatch : 'full'}
 ];
 
 @NgModule({
@@ -26,7 +28,8 @@ const approutes : Routes = [
     CountryListComponent,
     IndiaComponent,
     PlayersListComponent,
-    PlayerDetails
+    PlayerDetails,
+    EditPlayersComponent
   ],
   imports: [
     BrowserModule,
