@@ -1,0 +1,10 @@
+h2{
+    text-align: center;
+    position: fixed;
+    top: 5%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: lightgreen;
+    padding: 20px 0;
+}

@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Players } from './players.model';
-import { Subject } from 'rxjs';
 
 @Injectable({providedIn : 'root'})
 
@@ -17,7 +16,6 @@ export class PlayersService {
         ausplayers : Players[] = [new Players('Australia','Ricky Ponting','https://secure.i.telegraph.co.uk/multimedia/archive/01505/ponting_1505518c.jpg','1.Best Autralian captain till now.')];
 
         tcode : string;
-        newPlayer = new Subject<null>();
         constructor(){}
     
     

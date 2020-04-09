@@ -9,12 +9,14 @@ import { IndiaComponent } from './india/india.component';
 import { PlayersListComponent } from './shared/players-list/players-list.component';
 import { PlayerDetails } from './shared/players-list/player details/player-details.component';
 import { EditPlayersComponent } from './shared/edit-players/edit-players.component';
+import { PlayerHomeComponent } from './shared/players-list/player-home/player-home.component';
 
 const approutes : Routes = [
   { path : 'country', component : CountryListComponent},
   { path : 'country/:cname', component : IndiaComponent, children : [
-    { path : ':id', component : PlayerDetails},
-    { path : 'new', component : EditPlayersComponent}
+    { path : '', component : PlayerHomeComponent, pathMatch : 'full'},
+    { path : 'new', component : EditPlayersComponent},
+    { path : ':id', component : PlayerDetails}
   ]},
   { path : 'home', component : HomeComponent},
   { path : '', redirectTo : 'home' , pathMatch : 'full'}
@@ -29,7 +31,9 @@ const approutes : Routes = [
     IndiaComponent,
     PlayersListComponent,
     PlayerDetails,
-    EditPlayersComponent
+    EditPlayersComponent,
+    PlayerHomeComponent,
+    PlayerHomeComponent
   ],
   imports: [
     BrowserModule,

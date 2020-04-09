@@ -22,9 +22,11 @@ export class IndiaComponent implements OnInit {
     })
 } 
 onAddPlayers(){
-//  const s : string = './country/'+this.teamcode+'/new';
-//  console.log(s);
-//  this.router.navigate([s]);
-this.playersservice.newPlayer.next();
+this.router.navigate(['new'],{relativeTo : this.route});
 }
+onBack(){
+  this.router.navigate(['../'],{relativeTo : this.route});
 }
+
+}
+

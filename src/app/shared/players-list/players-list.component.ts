@@ -16,9 +16,6 @@ export class PlayersListComponent implements OnInit {
   @Input() index : number;
   
   ngOnInit() {
-    this.playersservice.newPlayer.subscribe(() => {
-      this.router.navigate(['new'],{relativeTo : this.route});
-    });
     }
 
     onPlayerClick(){
