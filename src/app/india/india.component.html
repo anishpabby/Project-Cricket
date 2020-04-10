@@ -1,12 +1,13 @@
 <div class="row">
     <div class="col-xs-5 col-md-5">
-            Please select the player !!
+        <hr>
+            <h4>Please select the player !!</h4>
             <br>
             <br>
             <app-players-list *ngFor = "let pl of players; let i=index" [playerss]= "pl" [index]="i">
             </app-players-list>
             <br>
-                <button type="submit" class="btn btn-primary" (click) ="onAddPlayers()">Add more players !!</button>
+                <button type="submit" class="btn btn-primary" (click) ="onAddPlayers()">Add a player !!</button>
                 <button type="submit" class="btn btn-secondary" (click) ="onBack()" style="margin-left: 5px;">Go Back</button>
         </div>
     <div class="col-xs-7 col-md-7">

@@ -14,12 +14,22 @@ export class PlayerDetails implements OnInit{
     
     player : Players;
     id : number;
+    team : string;
     
     ngOnInit(){
     this.route.params.subscribe(params => {
     this.id = +params['id'];
+    this.team = this.playerservice.getTeam();
     this.player = this.playerservice.getPlayer(this.id);
        });
     }
 
+    onDelete(){
+        this.playerservice.deletePlayer(this.id);
+        this.router.navigate(['../'],{relativeTo : this.route});
+    }
+
+    onEdit(){
+        this.router.navigate(['edit'],{relativeTo : this.route});
+    }
 }

@@ -1,12 +1,29 @@
-<h2 class="list-group-item-heading">{{player.name}} ({{player.country}})</h2>
-<br>
+<div class="row">
+    <div class="col-xs-12">
+        <hr>
+        <h2 class="list-group-item-heading">{{player.name}} ({{team}})</h2>
+        <br>
+    </div>
+</div>
+
 <div class="row">
     <div class="col-xs-12">
         <span class="pull-left">
-            <img src = "{{player.pic}}" style="max-height: 200px">
+            <img src = "{{player.pic}}" style="max-height: 200px" alt="No Pic Available">
             </span>
     </div>
 </div>
 <br>
-<p>{{player.records}}</p>
+<div class="row">
+    <div class="col-xs-12">
+        <p>{{player.records}}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+        <button type="submit" class="btn btn-secondary" (click)="onEdit()">Edit Details</button>
+        <button type="submit" class="btn btn-danger" style="margin-left: 5px;" (click)="onDelete()">Delete Player</button>
+    </div>
+</div>
 
