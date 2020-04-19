@@ -7,6 +7,10 @@
             <app-players-list *ngFor = "let pl of players; let i=index" [playerss]= "pl" [index]="i">
             </app-players-list>
             <br>
+           <button type="button" class="btn btn-success" (click) = "onFetchPlayers()"
+            *ngIf = "alength">Fetch Players from Server</button>
+            <br>
+            <br>
                 <button type="submit" class="btn btn-primary" (click) ="onAddPlayers()">Add a player !!</button>
                 <button type="submit" class="btn btn-secondary" (click) ="onBack()" style="margin-left: 5px;">Go Back</button>
         </div>

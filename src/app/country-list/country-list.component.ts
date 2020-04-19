@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../shared/data-store.service';
 
 @Component({
   selector: 'app-country-list',
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CountryListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dataservice : DataService) { }
 
   ngOnInit() {
   }
-
 }
