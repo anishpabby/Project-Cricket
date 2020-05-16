@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-xs-12">
+<form [formGroup] = "playerForm">
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-12" id="wide">
+                <label for="name" id="name">Player Name</label>
+                <input type="text" class="form-control" formControlName = "name">   
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-12" id="wide">
+                <label for="pic" id="pic">Player Picture Link</label>
+                <input type="text" class="form-control" formControlName = "pic" #imagepath>
+                <br>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <img [src]="imagepath.value" class="img-responsive" style="margin-left: 15px;" height="300px" width="300px">
+        </div>
+    <br>
+    <div class="row">
+        <div class="form-group">
+            <div class="col-xs-12" id="wide">
+                <label for="records" id="records">Player Details</label>
+                <textarea rows="2" class="form-control" formControlName = "records"></textarea>  
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+     <div class="col-xs-12">
+        <button type="submit" class="btn btn-primary" (click)="onAddingPlayers()"
+        style="margin-top: 5px" [disabled] = "!playerForm.valid">Save</button>
+        <button type="submit" class="btn btn-danger" (click)="onReturn()"
+        style="margin-left: 5px; margin-top: 5px;">Cancel</button>
+     </div>
+    </div>
+</form>
+</div>
+</div>
